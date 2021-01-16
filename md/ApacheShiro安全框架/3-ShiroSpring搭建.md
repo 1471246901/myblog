@@ -225,7 +225,7 @@ public class UserRealm extends AuthorizingRealm {
 
 只要是未登录都会路由到指定页面
 
-![image-20200417135807414](D:\Typora\data\image\image-20200417135807414.png)
+![image-20201217184308382](https://raw.githubusercontent.com/1471246901/myblog/master/img/image-20201217184308382.png)
 
 
 

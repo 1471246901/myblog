@@ -6,7 +6,7 @@
 
 - 配置文件默认放在服务端的同级目录下 `安装时组要赋值文件到该目录`
 
-  ![image-20200316195547811](D:\Typora\data\image\image-20200316195547811.png)
+  ![image-20200316195547811](https://raw.githubusercontent.com/1471246901/myblog/master/img/image-20200316195547811.png)
 
 **redis 配置文件主要配置**
 

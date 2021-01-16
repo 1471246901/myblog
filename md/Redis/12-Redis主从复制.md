@@ -8,7 +8,7 @@
 
     -   主从复制过程
 
-        <img src="D:\Typora\data\image\20160503192249524" alt="img" style="zoom: 67%;" />
+        ![image-20201214212521979](https://raw.githubusercontent.com/1471246901/myblog/master/img/image-20201214212521979.png)
 
         -   当一个从数据库中启动的时候,会向主数据库发送sync(同步)命令
         -   主数据库接收到sync命令之后会开始在后台保存快照,(rdb操作) 并将保存期间的命令缓存起来一并发送给从数据库.
@@ -60,19 +60,19 @@
         
         -   从节点写入测试
         
-            ![image-20200329194601271](D:\Typora\data\image\image-20200329194601271.png)
+            ![image-20200329194601271](https://raw.githubusercontent.com/1471246901/myblog/master/img/image-20200329194601271.png)
         
         -   主节点同步测试
         
-            ![image-20200329194801604](D:\Typora\data\image\image-20200329194801604.png)
+            ![image-20200329194801604](https://raw.githubusercontent.com/1471246901/myblog/master/img/image-20200329194801604.png)
         
-            ![image-20200329194834395](D:\Typora\data\image\image-20200329194834395.png)
+            ![image-20200329194834395](https://raw.githubusercontent.com/1471246901/myblog/master/img/image-20200329194834395.png)
         
             现在主节点插入数据,再在从节点查询,可以查询到
         
         -   使用 info replication查看节点信息 
         
-            ![image-20200329195319191](D:\Typora\data\image\image-20200329195319191.png)
+            ![image-20200329195319191](https://raw.githubusercontent.com/1471246901/myblog/master/img/image-20200329195319191.png)
         
             ```
             从节点显示的信息
@@ -93,7 +93,7 @@
             repl_backlog_histlen:0 #此值等于 master_repl_offset - repl_backlog_first_byte_offset,该值不会超过repl_backlog_size的大小
             ```
         
-            ![image-20200329195444735](D:\Typora\data\image\image-20200329195444735.png)
+            ![image-20200329195444735](https://raw.githubusercontent.com/1471246901/myblog/master/img/image-20200329195444735.png)
         
             ```
             主节点显示的信息

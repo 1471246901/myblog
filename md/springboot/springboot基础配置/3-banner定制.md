@@ -10,4 +10,4 @@ banner.txt  中输入要打印的字符,然后在复制到resource 文件夹下�
 
 >   [banner生成](http://patorjk.com/software/taag)
 
-![image-20200725153647158](3-banner%E5%AE%9A%E5%88%B6.assets/image-20200725153647158.png)
+![image-20200725153647158](https://raw.githubusercontent.com/1471246901/myblog/master/img/image-20200725153647158.png)

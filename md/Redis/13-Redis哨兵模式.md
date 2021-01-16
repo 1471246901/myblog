@@ -5,7 +5,7 @@
 ##### 哨兵模式是redis`高可用`的实现方式之一
  使用一个或者多个哨兵(Sentinel)实例组成的系统，对redis节点进行监控，在主节点出现故障的情况下，能将从节点中的一个升级为主节点，进行故障转移，保证系统的可用性。
 
-<img src="D:\Typora\data\image\5328368-5ece6944a49c6185.webp" alt="img" style="zoom: 80%;" />
+![image-20201214212721027](https://raw.githubusercontent.com/1471246901/myblog/master/img/image-20201214212721027.png)
 
 ##### 哨兵们是怎么感知整个系统中的所有节点(主节点/从节点/哨兵节点)的
 
@@ -108,7 +108,7 @@
 
 -   先运行主节点 在运行从节点 最后运行哨兵
 
-    ![image-20200330214200192](D:\Typora\data\image\image-20200330214200192.png)
+    ![image-20200330214200192](https://raw.githubusercontent.com/1471246901/myblog/master/img/image-20200330214200192.png)
 
     可以从控制台发现一个哨兵发现了主节点 还有 两个从节点  下面又发现了两个哨兵
 
@@ -119,15 +119,15 @@
     kill -9 进程号
     ```
 
-    ![image-20200330215001750](D:\Typora\data\image\image-20200330215001750.png)
+    ![image-20200330215001750](https://raw.githubusercontent.com/1471246901/myblog/master/img/image-20200330215001750.png)
 
     此时哨兵把6380 从节点提升到主节点了
 
-    ![image-20200330215250419](D:\Typora\data\image\image-20200330215250419.png)
+    ![image-20200330215250419](https://raw.githubusercontent.com/1471246901/myblog/master/img/image-20200330215250419.png)
 
     现在在重新启动一下 6379 节点
 
-    ![image-20200330215543065](D:\Typora\data\image\image-20200330215543065.png)
+    ![image-20200330215543065](https://raw.githubusercontent.com/1471246901/myblog/master/img/image-20200330215543065.png)
 
     
 

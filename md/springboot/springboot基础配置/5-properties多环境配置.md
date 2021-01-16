@@ -20,7 +20,7 @@ prod 生产环境
 
 1.  --- 三个横杠 可以把yml文件分成多个文档块
 
-![spring  8083  spring :  pore 8e84  Spring  les : prod ](5-properties%E5%A4%9A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.assets/clip_image001-1586677503612.png)
+![spring  8083  spring :  pore 8e84  Spring  les : prod ](https://raw.githubusercontent.com/1471246901/myblog/master/img/clip_image001-1586677503612.png)
 
 ```
 在每个文档快标注上spring.profiles 为什么环境下使用
@@ -31,4 +31,4 @@ prod 生产环境
 
 1.  1.  使用Java-jar方式启动 添加参数  --spring.profiles.active=指定环境
 
-![img](5-properties%E5%A4%9A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.assets/clip_image002-1586677503612.png)
+![img](https://raw.githubusercontent.com/1471246901/myblog/master/img/clip_image002-1586677503612.png)

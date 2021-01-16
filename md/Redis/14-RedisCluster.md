@@ -32,7 +32,7 @@ Redis Cluster 把所有的数据划分为16384个不同的槽位，可以根据�
 
 全量数据，单机Redis节点无法满足要求，按照分区规则把数据分到若干个子集当中
 
-<img src="D:\Typora\data\image\774371-20190704142443495-657525295.png" alt="img" style="zoom:67%;" />
+![aa](https://raw.githubusercontent.com/1471246901/myblog/master/img/774371-20190704142443495-657525295.png)
 
 ##### 常见的数据分布方式
 
@@ -52,9 +52,7 @@ Redis Cluster 把所有的数据划分为16384个不同的槽位，可以根据�
 
 预设虚拟槽，每个槽就相当于一个数字，有一定范围。每个槽映射一个数据子集，一般比节点数大,Redis Cluster中预设虚拟槽的范围为0到16383
 
-
-
-<img src="D:\Typora\data\image\1133627-20181027173424090-1936846535.png" alt="img" style="zoom: 67%;" />
+![](https://raw.githubusercontent.com/1471246901/myblog/master/img/1133627-20181027173424090-1936846535.png)
 
 图中应为取余运算
 
@@ -74,7 +72,7 @@ Redis Cluster 把所有的数据划分为16384个不同的槽位，可以根据�
 
 ###### 顺序分布与哈希分布的对比
 
-<img src="D:\Typora\data\image\1133627-20181027173436521-719668637.png" alt="img" style="zoom:67%;" />
+![](https://raw.githubusercontent.com/1471246901/myblog/master/img/1133627-20181027173436521-719668637.png)
 
 #### Redis Cluster 基本架构
 
@@ -84,7 +82,7 @@ reids cluster是分布式架构:集群中有多个节点,每个节点都负责�
 
 ##### meet操作   (会面)
 
-节点之间会进行相互通信,以便完成数据的共享,meet是节点之间完成相互通讯的基础,meet操作有着一定的频率和规则<img src="D:\Typora\data\image\1133627-20181027173608325-1809944413.png" alt="img" style="zoom:60%;" />
+节点之间会进行相互通信,以便完成数据的共享,meet是节点之间完成相互通讯的基础,meet操作有着一定的频率和规则 ![](https://raw.githubusercontent.com/1471246901/myblog/master/img/1133627-20181027173608325-1809944413.png)
 
 ##### 分配槽
 
@@ -92,7 +90,7 @@ reids cluster是分布式架构:集群中有多个节点,每个节点都负责�
 
 由于每个节点之间都彼此通信，每个节点都知道另外节点负责管理的槽范围
 
-<img src="D:\Typora\data\image\1133627-20181027173506943-656215359.png" alt="img" style="zoom:50%;" />
+![](https://raw.githubusercontent.com/1471246901/myblog/master/img/1133627-20181027173506943-656215359.png)
 
 ##### 主从复制
 
@@ -104,7 +102,7 @@ reids cluster是分布式架构:集群中有多个节点,每个节点都负责�
 
 ###### moved重定向
 
-当客户端发送命令到集群的任意一个节点时如果key指向的槽在自己身上则执行命令,如果不在自己身上则向客户端返回正确的节点,然后客户端在去重新发送命令给正确的节点<img src="D:\Typora\data\image\1133627-20181027173651666-1863525873.png" alt="img" style="zoom: 50%;" />
+当客户端发送命令到集群的任意一个节点时如果key指向的槽在自己身上则执行命令,如果不在自己身上则向客户端返回正确的节点,然后客户端在去重新发送命令给正确的节点 ![moved](https://raw.githubusercontent.com/1471246901/myblog/master/img/1133627-20181027173651666-1863525873.png)
 
 
 
@@ -112,7 +110,7 @@ reids cluster是分布式架构:集群中有多个节点,每个节点都负责�
 
 在进行集群扩容和缩容的时候,当客户端像一个正确(指槽命中)的节点发送命令时,槽和槽中的数据已经转移到别的节点了就会返回ask异常,客户端会使用asking 命令给新的节点,然后在发送命令,得到数据
 
-<img src="D:\Typora\data\image\1133627-20181027173806627-1735185965.png" alt="img" style="zoom: 80%;" />
+![ask](https://raw.githubusercontent.com/1471246901/myblog/master/img/1133627-20181027173806627-1735185965.png)
 
 ###### moved重定向与ask重定向的相同点和不同点
 
@@ -146,7 +144,7 @@ ask指槽和数据正在迁移中
 
 ###### 四种方案对比
 
-![img](D:\Typora\data\image\1133627-20181027173936256-290379346.png)
+![img](https://raw.githubusercontent.com/1471246901/myblog/master/img/1133627-20181027173936256-290379346.png)
 
 ##### 故障发现
 

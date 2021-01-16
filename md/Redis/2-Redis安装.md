@@ -8,11 +8,11 @@
 
 Redis 支持 32 位和 64 位。这个需要根据你系统平台的实际情况选择，这里我们下载 **Redis-x64-xxx.zip**压缩包到 C 盘，解压后，将文件夹重新命名为 **redis**。
 
-![image-20200227183317937](D:\Typora\data\image\image-20200227183317937.png)
+![image-20200227183317937](https://raw.githubusercontent.com/1471246901/myblog/master/img/image-20200227183317937.png)
 
 打开文件夹，内容如下：
 
-<img src="D:\Typora\data\image\image-20200316190936101.png" alt="redis文件目录" style="zoom:67%;" />
+![fd](https://raw.githubusercontent.com/1471246901/myblog/master/img/image-20200316190936101.png)
 
 打开一个 **cmd** 窗口 使用 cd 命令切换目录到 **C:\redis** 运行：
 
@@ -22,7 +22,7 @@ redis-server.exe redis.windows.conf
 
 如果想方便的话，可以把 redis 的路径加到系统的环境变量里，这样就省得再输路径了，后面的那个 redis.windows.conf 可以省略，如果省略，会启用默认的。输入之后，会显示如下界面：
 
-![image-20200227183358856](D:\Typora\data\image\image-20200227183358856.png)
+![image-20200227183358856](https://raw.githubusercontent.com/1471246901/myblog/master/img/image-20200227183358856.png)
 
 这时候另启一个 cmd 窗口，原来的不要关闭，不然就无法访问服务端了。
 
@@ -44,7 +44,7 @@ set myKey abc
 get myKey
 ```
 
-![image-20200227183450124](D:\Typora\data\image\image-20200227183450124.png)
+![AA](https://raw.githubusercontent.com/1471246901/myblog/master/img/image-20200227183450124.png)
 
 
 
@@ -103,7 +103,7 @@ get myKey
 
   - 测试错误
 
-    ![img](D:\Typora\data\image\1394443-20190804185845859-1930054888.png)
+    ![img](https://raw.githubusercontent.com/1471246901/myblog/master/img/1394443-20190804185845859-1930054888.png)
 
   - 解决方案
 
@@ -113,7 +113,7 @@ get myKey
     
   - 测试成功
   
-    ![img](D:\Typora\data\image\1394443-20190804191337149-1261801629.png)
+    ![img](https://raw.githubusercontent.com/1471246901/myblog/master/img/1394443-20190804191337149-1261801629.png)
 
 - 安装
 
@@ -126,7 +126,7 @@ sudo make install
     ``` shell 
     cd /usr/local/bin
     ```
-    ![img](D:\Typora\data\image\1394443-20190804193124947-98967165.png)
+    ![img](https://raw.githubusercontent.com/1471246901/myblog/master/img/1394443-20190804193124947-98967165.png)
     ``` tex
     redis-benchmark　　　　　redis性能测试工具
 redis-check-rdb　　　　　 rdb文件检索工具　　　　　　
@@ -136,9 +136,10 @@ redis-check-rdb　　　　　 rdb文件检索工具　　　　　　
     ```
 
    - 复制配置文件
-　　　
+
 　　　```shell
 　　　sudo cp redis.conf /etc/redis/redis.conf
 　　　```
 　　　
+
    - 安装成功

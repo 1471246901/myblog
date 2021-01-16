@@ -15,14 +15,14 @@
 
             -   可以先有一亿个二进制比特，然后网警用八个不同的随机数产生器（F1,F2, …,F8） 产生八个信息指纹（f1, f2, …, f8）。接下来用一个随机数产生器 G 把这八个信息指纹映射到 1 到1亿中的八个自然数 g1, g2, …,g8。最后把这八个位置的二进制全部设置为一。过程如下：
 
-                ![img](D:\Typora\data\image\21a4462309f79052696269b62519dfcc7acbd52d.jpeg)
+                ![img](https://raw.githubusercontent.com/1471246901/myblog/master/img/21a4462309f79052696269b62519dfcc7acbd52d.jpeg)
 
             -   
                 有一天网警查到了一个可疑的网站，想判断一下是否是XX网站，首先将可疑网站通过哈希映射到1亿个比特数组上的8个点。如果8个点的其中有一个点不为1，则可以判断该元素一定不存在集合中。
 
             -   那这个布隆过滤器是如何解决redis中的缓存穿透呢？很简单首先也是对所有可能查询的参数以hash形式存储，当用户想要查询的时候，使用布隆过滤器发现不在集合中，就直接丢弃，不再对持久层查询。
 
-                <img src="D:\Typora\data\image\d788d43f8794a4c2773846a5251e13d3ac6e3910.jpeg" alt="img"  />
+                ![image-20201214212239459](https://raw.githubusercontent.com/1471246901/myblog/master/img/image-20201214212239459.png)
 
         -   ###### 缓存空对象
 
@@ -38,7 +38,7 @@
 
         缓存雪崩是指，缓存层出现了错误，不能正常工作了。于是所有的请求都会达到存储层，存储层的调用量会暴增，造成存储层也会挂掉的情况。
 
-        ![img](D:\Typora\data\image\9c16fdfaaf51f3dec6606ae3a504f81938297953.jpeg)
+        ![image-20201214212329915](https://raw.githubusercontent.com/1471246901/myblog/master/img/image-20201214212329915.png)
 
     -   ##### 解决方案
 
@@ -62,7 +62,7 @@
     -   #####    **解决方案：**
 
         -   设置热点数据永远不过期。
-        -   加互斥锁，互斥锁参考代码如下：     ![img](D:\Typora\data\image\20180919143214879.png)
+        -   加互斥锁，互斥锁参考代码如下：     ![img](https://raw.githubusercontent.com/1471246901/myblog/master/img/20180919143214879.png)
 
 >   ### [帮你解读什么是Redis*缓存穿透*和缓存雪崩(包括解决方案) ](https://www.baidu.com/link?url=Xm4euy7irx2RfbuNP3JYSdkqB93N-y81H-skGxk2eebtYD_cbo1qHBuw_ggBsbNLAx58a7bA2qRQHWF-6FgPWis--5CI40PE4M-D--VRge_&wd=&eqid=9317c51d00236d64000000035e7f1ffa)
 >

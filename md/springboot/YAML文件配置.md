@@ -64,17 +64,17 @@ spring boot  推荐使用 yml 作为配置文件
 
     6.  ```yaml
         Persion:
-        lastName: ZhangSan
-        age: 20
-        boss:false
-        birth: 2017/12/12
-        map：{k1: v1,K2: v2}
-        Lists:
-        - lisi
-        - asd
-        Dog:
-        Name: littledog
-        Age: 12
+            lastName: ZhangSan
+            age: 20
+            boss: false
+            birth: 2017/12/12
+            map：{k1: v1,K2: v2}
+            Lists:
+                - lisi
+                - asd
+            Dog:
+                Name: littledog
+                Age: 12
         ```
 
     7.  
