@@ -35,8 +35,16 @@ znode是zooKeeper集合的核心组件，zookeeper API提供了一小组方法�
 
 ## zookeeper的连接
 
+
+
 ```java
 ZooKeeper(String connectionString, int sessionTimeout, Watcher watcher)
+```
+
+**在进行集群链接时，connectionString 参数使用逗号把ip隔开 如：**
+
+```java
+ZooKeeper("192.168.60.130:2181,192.168.60.130:2182,192.168.60.130:2183",sessionTimeout,Watcher)
 ```
 
 -   connectString（String）：连接串，包括ip+端口 ,集群模式下用**逗号**隔开；

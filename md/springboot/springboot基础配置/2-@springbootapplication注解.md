@@ -340,7 +340,9 @@ ComponentScan 提供扫描是的配置,可查看源码,最常用的
 
 #### @ComponentScan.Filter 注解,制定规则
 
-先来看type属性，它是FilterType类型的，而FilterType是一个枚举类型，一种有五个值。分别是FitlerType.ANNOTATION：指定注解
+先来看type属性，它是FilterType类型的，而FilterType是一个枚举类型，一种有五个值。分别是
+
+FitlerType.ANNOTATION：指定注解
 
 FilterType.ASSIGNABLE_TYPE：指定类型
 
