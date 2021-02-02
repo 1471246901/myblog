@@ -4,7 +4,7 @@
 
 - 在Linux下配置文件名称为`redis.conf`
 
-- 配置文件默认放在服务端的同级目录下 `安装时组要赋值文件到该目录`
+- 配置文件默认放在服务端的同级目录下 `安装时组要复制文件到该目录`
 
   ![image-20200316195547811](https://raw.githubusercontent.com/1471246901/myblog/master/img/image-20200316195547811.png)
 
