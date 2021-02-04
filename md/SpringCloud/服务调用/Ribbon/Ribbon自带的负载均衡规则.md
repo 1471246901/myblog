@@ -8,6 +8,8 @@ Ribbon使用 IRule接口实现负载均衡
 
 ![image-20210202142526041](https://raw.githubusercontent.com/1471246901/myblog/master/img/image-20210202142526041.png)
 
+
+
 ## Ribbon中自带的 IRule
 
 | 类名                                    | 简介                                                         |
