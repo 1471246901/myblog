@@ -1,4 +1,4 @@
-# openfeign简单实用
+# openfeign简单使用
 
 openfeign 以来了Ribbon 所以在引入openfeign后应删除Ribbon的引用
 
