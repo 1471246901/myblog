@@ -1,6 +1,6 @@
 # Servlet Filter Listener
 
-在SpringBoot 或者 SpringMVC中基本不使用 Servlet  Filter  Listener 但是某些请胯下如果需要使用
+在SpringBoot 或者 SpringMVC中基本不使用 Servlet  Filter  Listener 但是某些请求下如果需要使用
 
 需要 @WebServlet  @WebFilter  @WebListener 
 

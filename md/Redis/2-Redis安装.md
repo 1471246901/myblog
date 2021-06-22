@@ -129,7 +129,7 @@ sudo make install
     ![img](https://raw.githubusercontent.com/1471246901/myblog/master/img/1394443-20190804193124947-98967165.png)
     ``` tex
     redis-benchmark　　　　　redis性能测试工具
-redis-check-rdb　　　　　 rdb文件检索工具　　　　　　
+    redis-check-rdb　　　　　 rdb文件检索工具　　　　　　
     redis-check-aof　　　　　 aof文件修复工具
     redis-cli　　　　　　　　　redis命令行客户端
     redis-server  　　　　　 redis服务器
@@ -137,9 +137,10 @@ redis-check-rdb　　　　　 rdb文件检索工具　　　　　　
 
    - 复制配置文件
 
-　　　```shell
-　　　sudo cp redis.conf /etc/redis/redis.conf
-　　　```
+```shell
+sudo cp redis.conf /etc/redis/redis.conf
+```
+
 　　　
 
    - 安装成功
