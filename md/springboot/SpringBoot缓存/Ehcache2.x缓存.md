@@ -7,7 +7,7 @@ Ehcache 只需一个配置文件即可集成到springboot 中
 ### maven 依赖
 
 ```xml
-<dependency>
+				<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
@@ -25,7 +25,7 @@ Ehcache 只需一个配置文件即可集成到springboot 中
 
 需要在class path路径下创建 `ehcache.xml` 配置文件
 
-```java
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"

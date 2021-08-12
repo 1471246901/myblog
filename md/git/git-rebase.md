@@ -1,7 +1,7 @@
 Git 操作
 假设Git目前只有一个分支master。开发人员的工作流程是
 
-git clone master branch
+`git clone master branch`
 在自己本地checkout -b local创建一个本地开发分支
 在本地的开发分支上开发和测试
 阶段性开发完成后（包含功能代码和单元测试），可以准备提交代码
@@ -13,8 +13,14 @@ git rebase master 将master最新的分支同步到本地，这个过程可能�
 git push将master分支的提交上传
 本地开发分支可以灵活管理
 
-git checkout master
-git pull
+
+
+
+
+git checkout -b dev
+
+git checkout master 选择
+git pull拉取最新的分支状态
 git checkout local
 git rebase -i HEAD~2  //合并提交 --- 2表示合并两个
 git rebase master---->解决冲突--->git rebase --continue

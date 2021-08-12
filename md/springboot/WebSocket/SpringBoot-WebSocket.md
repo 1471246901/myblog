@@ -2,7 +2,7 @@
 
 ## maven依赖
 
-SpringBoot2.0对WebSocket的支持简直太棒了，直接就有包可以引入
+SpringBoot2.0对WebSocket的支持，直接就有包可以引入
 
 ```xml
 		<dependency>  

@@ -33,7 +33,6 @@ public class HelloServiceProperties {
 @ConditionalOnClass(HelloService.class)
 @ConditionalOnProperty(prefix = "hello", value = "enable", matchIfMissing = true)
 public class HelloServiceAutoConfiguration {
-
 }
 
 @RestController

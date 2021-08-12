@@ -202,55 +202,56 @@
 
 ## JTA
 
--   -   spring.jta.allow-multiple-lrc
-        是否允许 multiple LRC，默认为: false
-    -   spring.jta.asynchronous2-pc
-        指定两阶段提交是否可以异步，默认为: false
-    -   spring.jta.background-recovery-interval
-        指定多少分钟跑一次recovery process，默认为: 1
-    -   spring.jta.background-recovery-interval-seconds
-        指定多久跑一次recovery process，默认: 60
-    -   spring.jta.current-node-only-recovery
-        是否过滤掉其他非本JVM的recovery，默认为: true
-    -   spring.jta.debug-zero-resource-transaction
-        是否追踪没有使用指定资源的事务，默认为: false
-    -   spring.jta.default-transaction-timeout
-        设定默认的事务超时时间，默认为60
-    -   spring.jta.disable-jmx
-        是否禁用jmx，默认为false
-    -   spring.jta.enabled
-        是否开启JTA support，默认为: true
-    -   spring.jta.exception-analyzer
-        设置指定的异常分析类
-    -   spring.jta.filter-log-status
-        使用Bitronix Transaction Manager时，是否写mandatory logs，开启的话，可以节省磁盘空间，但是调试会复杂写，默认为false
-    -   spring.jta.force-batching-enabled
-        使用Bitronix Transaction Manager时，是否批量写磁盘，默认为true.
-    -   spring.jta.forced-write-enabled
-        使用Bitronix Transaction Manager时，是否强制写日志到磁盘，默认为true
-    -   spring.jta.graceful-shutdown-interval
-        当使用Bitronix Transaction Manager，指定shutdown时等待事务结束的时间，超过则中断，默认为60
-    -   spring.jta.jndi-transaction-synchronization-registry-name
-        当使用Bitronix Transaction Manager时，在JNDI下得事务同步registry，默认为: java:comp/TransactionSynchronizationRegistry
-    -   spring.jta.jndi-user-transaction-name
-        指定在JNDI使用Bitronix Transaction Manager的名称，默认:java:comp/UserTransaction
-    -   spring.jta.journal
-        当使用Bitronix Transaction Manager，指定The journal是否disk还是null还是一个类的全限定名，默认disk
-    -   spring.jta.log-dir
-        Transaction logs directory.
-    -   spring.jta.log-part1-filename
-        指定The journal fragment文件1的名字，默认: btm1.tlog
-    -   spring.jta.log-part2-filename
-        指定The journal fragment文件2的名字，默认: btm2.tlog
-    -   spring.jta.max-log-size-in-mb
-        指定journal fragments大小的最大值. 默认: 2M
-    -   spring.jta.resource-configuration-filename
-        指定Bitronix Transaction Manager配置文件名.
-    -   spring.jta.server-id
-        指定Bitronix Transaction Manager实例的id.
-    -   spring.jta.skip-corrupted-logs
-        是否忽略corrupted log files文件，默认为false.
-    -   spring.jta.transaction-manager-id
-        指定Transaction manager的唯一标识.
-    -   spring.jta.warn-about-zero-resource-transaction
-        当使用Bitronix Transaction Manager时，是否对没有使用指定资源的事务进行警告，默认为: true
+- spring.jta.allow-multiple-lrc
+  是否允许 multiple LRC，默认为: false
+
+-   spring.jta.asynchronous2-pc
+    指定两阶段提交是否可以异步，默认为: false
+-   spring.jta.background-recovery-interval
+    指定多少分钟跑一次recovery process，默认为: 1
+-   spring.jta.background-recovery-interval-seconds
+    指定多久跑一次recovery process，默认: 60
+-   spring.jta.current-node-only-recovery
+    是否过滤掉其他非本JVM的recovery，默认为: true
+-   spring.jta.debug-zero-resource-transaction
+    是否追踪没有使用指定资源的事务，默认为: false
+-   spring.jta.default-transaction-timeout
+    设定默认的事务超时时间，默认为60
+-   spring.jta.disable-jmx
+    是否禁用jmx，默认为false
+-   spring.jta.enabled
+    是否开启JTA support，默认为: true
+-   spring.jta.exception-analyzer
+    设置指定的异常分析类
+-   spring.jta.filter-log-status
+    使用Bitronix Transaction Manager时，是否写mandatory logs，开启的话，可以节省磁盘空间，但是调试会复杂写，默认为false
+-   spring.jta.force-batching-enabled
+    使用Bitronix Transaction Manager时，是否批量写磁盘，默认为true.
+-   spring.jta.forced-write-enabled
+    使用Bitronix Transaction Manager时，是否强制写日志到磁盘，默认为true
+-   spring.jta.graceful-shutdown-interval
+    当使用Bitronix Transaction Manager，指定shutdown时等待事务结束的时间，超过则中断，默认为60
+-   spring.jta.jndi-transaction-synchronization-registry-name
+    当使用Bitronix Transaction Manager时，在JNDI下得事务同步registry，默认为: java:comp/TransactionSynchronizationRegistry
+-   spring.jta.jndi-user-transaction-name
+    指定在JNDI使用Bitronix Transaction Manager的名称，默认:java:comp/UserTransaction
+-   spring.jta.journal
+    当使用Bitronix Transaction Manager，指定The journal是否disk还是null还是一个类的全限定名，默认disk
+-   spring.jta.log-dir
+    Transaction logs directory.
+-   spring.jta.log-part1-filename
+    指定The journal fragment文件1的名字，默认: btm1.tlog
+-   spring.jta.log-part2-filename
+    指定The journal fragment文件2的名字，默认: btm2.tlog
+-   spring.jta.max-log-size-in-mb
+    指定journal fragments大小的最大值. 默认: 2M
+-   spring.jta.resource-configuration-filename
+    指定Bitronix Transaction Manager配置文件名.
+-   spring.jta.server-id
+    指定Bitronix Transaction Manager实例的id.
+-   spring.jta.skip-corrupted-logs
+    是否忽略corrupted log files文件，默认为false.
+-   spring.jta.transaction-manager-id
+    指定Transaction manager的唯一标识.
+-   spring.jta.warn-about-zero-resource-transaction
+    当使用Bitronix Transaction Manager时，是否对没有使用指定资源的事务进行警告，默认为: true

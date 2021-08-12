@@ -14,8 +14,6 @@
 
 ---
 
-
-
 ### 接口
 
 | 接口url                          | 接口简介                                                     | 涉及到的服务 | 对应的接口                    |
@@ -162,7 +160,7 @@ CloudCodeDao
 
 dao  AppletShareDao   
 
-缓存 全量缓存定时刷新。 （0 0/5 * * * *） 每五分
+缓存 全量缓存定时刷新。 （0 0/5 * * * *） 每五秒
 
 ##### book_rec_bind
 
@@ -350,7 +348,7 @@ siteList", siteListArray);
 通过`siteFilterProduce` 对sitelist 进行过滤，目前的过滤器有
 
 - `BabybusSiteFilter`  过滤版本小于 3.5.6 的android版本
-- `FunshionUnionSiteFilter` 过滤小雨3.9.3的android版本
+- `FunshionUnionSiteFilter` 过滤小于3.9.3的android版本
 - `PPTVSiteFilter` 过滤android版本或 tag含有 pptvios可展示 
 
 ···
@@ -418,7 +416,7 @@ siteList", siteListArray);
 
 对`pageWebsite` 的数据进行遍历
 
-​	通过`singleAlbumPlayPolicyService` 获取（device，aid）对应的 专辑播放逻辑
+​	通过`singleAlbumPlayPolicyService` 获取（device，aid）对应的 专辑播放逻辑控制
 
 ​	对 site 为LETV 使用 configLetvPlayer 
 
@@ -937,3 +935,98 @@ html页面
 /kuaikan/apiuserprofilesync_json.so   获取用户信息
 
 获取用户年龄性别信息
+
+
+
+| 参数名称                          | 参数描述                                                     | 参数类型 |
+| :-------------------------------- | :----------------------------------------------------------- | :------- |
+| code                              | 状态码                                                       | string   |
+| data                              | 业务数据                                                     | array    |
+| data[].aid                        | 视频aid                                                      | string   |
+| data[].copyright                  | 版权                                                         | string   |
+| data[].defaultPlayer              | 默认播放方式                                                 | string   |
+| data[].episodes                   | 视频总剧集数                                                 | string   |
+| data[].episodeStatus              | 聚集状态                                                     | string   |
+| data[].external_id                | 外部id                                                       | string   |
+| data[].nowEpisodes                | 更新到的剧集数                                               | string   |
+| data[].openway                    | 打开方式，1 native播放，2 Webview-h5播放，3 外部浏览器-h5播放 | int      |
+| data[].orderlist                  | 剧集列表                                                     | string   |
+| data[].orderNum                   | 剧集数量                                                     | string   |
+| data[].playStreams                | 播放流                                                       | string   |
+| data[].recReport                  | 推荐报告                                                     | int      |
+| data[].sdkstream                  | 是否允许截流播放                                             | int      |
+| data[].site                       | 网站                                                         | string   |
+| data[].sitelogo                   | 网站logo                                                     | string   |
+| data[].sitename                   | 网站名称                                                     | string   |
+| data[].src                        | 播放源（2）                                                  | string   |
+| data[].subsrc                     | 子网站                                                       | string   |
+| data[].videoId                    | 视频id                                                       | string   |
+| data[].videoList                  | 专辑下的视频元信息列表                                       | array    |
+| data[].videoList[].cloudId        |                                                              | string   |
+| data[].videoList[].contentType    | 视频类型                                                     | string   |
+| data[].videoList[].copyAddress    | 是否可以复制链接                                             | int      |
+| data[].videoList[].copyright      | 版权                                                         | string   |
+| data[].videoList[].deadlink       | 死链                                                         | string   |
+| data[].videoList[].displayUrl     | 播放路径                                                     | string   |
+| data[].videoList[].external_id    | 外部播放id（视频所有者id）                                   | string   |
+| data[].videoList[].globalVid      | global视频id                                                 | string   |
+| data[].videoList[].isdownload     | 是否可以下载                                                 | string   |
+| data[].videoList[].name           | 名称                                                         |          |
+| data[].videoList[].mid            |                                                              | string   |
+| data[].videoList[].isPay          |                                                              | string   |
+| data[].videoList[].pls            | playStreams                                                  | string   |
+| data[].videoList[].porder         | 边界大小                                                     | string   |
+| data[].videoList[].preview        | 预览视图                                                     | int      |
+| data[].videoList[].timePoint      | 时间点                                                       | json     |
+| data[].videoList[].timePoint.head | 起始位置？                                                   | int      |
+| data[].videoList[].timePoint.tail | 播放位置？                                                   | int      |
+| data[].videoList[].url            |                                                              | string   |
+| data[].videoList[].vid            | 视频id                                                       | string   |
+| msg                               | 信息                                                         | string   |
+| ts                                | 时间戳                                                       | long     |
+
+| 参数   | 参数描述 |
+| ------ | -------- |
+| device | 设备参数 |
+| aid    | 视频aid  |
+| site   | 网站     |
+| pn     | 页码     |
+| ps     | 页大小   |
+
+
+
+
+
+
+
+| 参数           |      |      |
+| -------------- | ---- | ---- |
+| videolist      |      |      |
+| video_duration |      |      |
+| Video_name     |      |      |
+| type           |      |      |
+| video_4        |      |      |
+|                |      |      |
+|                |      |      |
+|                |      |      |
+|                |      |      |
+|                |      |      |
+|                |      |      |
+|                |      |      |
+|                |      |      |
+|                |      |      |
+|                |      |      |
+|                |      |      |
+
+
+
+
+
+
+
+
+
+
+
+
+
